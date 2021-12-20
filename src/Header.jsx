@@ -1,12 +1,12 @@
 import React from "react";
 import Reactdom from "react-dom";
-import { Navbar, Nav } from "react-bootstrap"
+import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <div>
-      <Navbar bg="dark" variant="dark">
+      <Navbar className="header" >
         <Navbar.Brand href="#home">E-comm</Navbar.Brand>
         <Nav className="mr-auto navbar_wrapper">
           <Link to="/add">Add Product</Link>

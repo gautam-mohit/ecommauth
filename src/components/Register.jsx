@@ -4,6 +4,11 @@ const Register = () => {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
+
+  function SignUp() {
+    let item = { name, password, email };
+    console.log(item);
+  }
   return (
     <div className="col-sm-6 offset-sm-3">
       <h1>Register</h1>
@@ -11,7 +16,7 @@ const Register = () => {
         type="text"
         value={name}
         onChange={(e) => setName(e.target.value)}
-        classname="form-control"
+        className="form-control"
         placeholder="name"
       />
       <br />
@@ -19,8 +24,7 @@ const Register = () => {
         type="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
-        classname="form-control"
-        classname="form-control"
+        className="form-control"
         placeholder="password"
       />
       <br />
@@ -28,12 +32,11 @@ const Register = () => {
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        classname="form-control"
-        classname="form-control"
+        className="form-control"
         placeholder="email"
       />
       <br />
-      <button className="btn btn-primary">Sign Up</button>
+      <button onClick={SignUp} className="btn btn-primary">Sign Up</button>
     </div>
   );
 };
